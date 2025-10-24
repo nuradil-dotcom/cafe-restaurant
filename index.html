@@ -5,18 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Culinary Canvas - Толыққанды Тапсырыс Қолданбасы</title>
     
-    <!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Swiper CSS and JS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
-    <!-- Inter Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     
-    <!-- Ionicons -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <style>
@@ -173,15 +169,10 @@
 
 <body class="">
 
-    <!-- ---------------------------------------------------- -->
-    <!-- --- HEADER (Sticky, Glassmorphism) --- -->
-    <!-- ---------------------------------------------------- -->
     <header class="sticky top-0 z-50 glass-header">
-        <!-- Адаптивность: p-4 для мобильных, p-6 для десктопов -->
         <div class="container mx-auto flex justify-between items-center px-4 py-3 md:px-6 md:py-4">
             <a href="#home" class="text-2xl md:text-3xl font-extrabold tracking-tight text-red-500">CULINARY CO.</a>
             
-            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8 items-center">
                 <nav class="space-x-8 text-lg font-medium text-secondary">
                     <a href="#menu" class="hover:text-red-500 transition duration-300">Мәзір</a>
@@ -194,15 +185,12 @@
                     <span>Себет (<span id="cart-count">0</span>)</span>
                 </button>
                 <button id="theme-toggle" class="text-3xl text-secondary hover:text-red-500 transition duration-300 p-2 rounded-lg">
-                    <!-- FIX: Icon is handled by JS -->
                     <ion-icon name="moon-outline"></ion-icon>
                 </button>
             </div>
             
-            <!-- Mobile Toggles -->
             <div class="md:hidden flex items-center space-x-1">
                 <button id="theme-toggle-mobile" class="text-3xl text-secondary hover:text-red-500 transition duration-300 p-2">
-                    <!-- FIX: Icon is handled by JS -->
                     <ion-icon name="moon-outline"></ion-icon>
                 </button>   
                 <button class="md:hidden text-3xl text-secondary hover:text-red-500 p-2" onclick="toggleMobileMenu()">
@@ -211,7 +199,6 @@
             </div>
         </div>
         
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden glass-header py-4 px-6 text-center text-secondary font-medium border-t dark:border-white/10 light:border-black/10">
             <a href="#menu" class="block py-3 text-lg hover:text-red-500" onclick="toggleMobileMenu()">Мәзір</a>
             <a href="#about" class="block py-3 text-lg hover:text-red-500" onclick="toggleMobileMenu()">Біз туралы</a>
@@ -225,15 +212,11 @@
 
     <main>
         
-        <!-- ---------------------------------------------------- -->
-        <!-- --- HOME/HERO SECTION (FIXED TEXT CONTRAST) --- -->
-        <!-- ---------------------------------------------------- -->
         <section id="home" class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/pexels-chanwalrus-958545.jpg');">
                 <div class="absolute inset-0 gradient-overlay"></div>
             </div>
             <div class="relative z-10 p-4 md:p-8 max-w-4xl">
-                <!-- FIX: Added hero-text-primary/secondary for light mode contrast -->
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tighter hero-text-primary text-transparent bg-clip-text bg-gradient-to-r dark:from-white dark:to-gray-300 light:from-gray-900 light:to-gray-700">
                     Дәмді тағам, сізге жеткізіледі.
                 </h1>
@@ -247,21 +230,14 @@
         </section>
 
         
-        <!-- ---------------------------------------------------- -->
-        <!-- --- MENU SECTION --- -->
-        <!-- ---------------------------------------------------- -->
         <section id="menu" class="py-16 md:py-24 bg-section">
             <div class="container mx-auto px-4 md:px-6">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-primary leading-tight tracking-tighter">Біздің Мәзір</h2>
                 
-                <!-- Menu Tabs (Адаптивность: скролл на мобильном) -->
                 <div id="menu-tabs" class="flex justify-start md:justify-center overflow-x-auto whitespace-nowrap space-x-4 md:space-x-8 mb-12 border-b border-border-section">
-                    <!-- Tabs will be rendered here -->
-                </div>
+                    </div>
 
-                <!-- Menu Content Grid (Надежная адаптивная сетка) -->
                 <div id="menu-content" class="text-secondary">
-                    <!-- grid-cols-1 на мобильных, grid-cols-2 на средних, grid-cols-4 на больших -->
                     <div id="mains" class="tab-panel grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
                     <div id="appetizers" class="tab-panel hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
                     <div id="desserts" class="tab-panel hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
@@ -271,9 +247,6 @@
         </section>
 
         
-        <!-- ---------------------------------------------------- -->
-        <!-- --- ABOUT SECTION (Video Background) --- -->
-        <!-- ---------------------------------------------------- -->
         <section id="about" class="relative py-24 md:py-36 min-h-[70vh] flex items-center justify-center overflow-hidden">
             <video autoplay loop muted playsinline class="absolute inset-0 h-full w-full object-cover">
                 <source src="vid/Untitled design(1).mp4" type="video/mp4">
@@ -282,7 +255,6 @@
             <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
 
             <div class="relative z-10 container mx-auto px-6 max-w-6xl grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-                <!-- Адаптивность: изображение скрыто на мобильном, появляется на десктопе -->
                 <div class="hidden md:block">
                     <img src="img/jantarnaya_legenda057.jpg" alt="Біздің бас аспазшымыз тамақ дайындап жатыр" class="rounded-2xl shadow-2xl w-full h-auto object-cover border-4 border-white/20 transform hover:scale-[1.02] transition duration-500 ease-in-out">
                 </div>
@@ -299,14 +271,10 @@
         </section>
 
         
-        <!-- ---------------------------------------------------- -->
-        <!-- --- REVIEWS SECTION --- -->
-        <!-- ---------------------------------------------------- -->
         <section id="reviews" class="py-16 md:py-24 bg-section overflow-hidden">
             <div class="container mx-auto px-4 md:px-6 relative">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-primary leading-tight tracking-tighter">Біздің Клиенттер не дейді</h2>
                 
-                <!-- Review Swiper -->
                 <div class="swiper review-swiper mb-12">
                     <div id="review-wrapper" class="swiper-wrapper">
                         <div class="swiper-slide p-8 text-center text-secondary">Пікірлер жүктелуде...</div>
@@ -317,8 +285,6 @@
                 </div>
 
                 
-                <!-- Review Submission Form (Glass Card) -->
-                <!-- Адаптивность: max-w-xl для десктопов -->
                 <div id="review-submission-container" class="max-w-md sm:max-w-xl mx-auto mt-16 p-6 md:p-8 glass-card rounded-2xl">
                     <h3 class="text-3xl font-bold text-red-500 mb-6 text-center">Өз пікіріңізді қалдырыңыз</h3>
                     <form id="review-form" onsubmit="handleReviewSubmit(event)">
@@ -328,7 +294,6 @@
                         </div>
                         <div class="mb-4">
                             <label for="review-rating" class="block text-secondary font-semibold mb-2">Баға</label>
-                            <!-- FIX: Added input-field class to select for theme styling -->
                             <select id="review-rating" required class="w-full p-3 rounded-xl input-field appearance-none cursor-pointer">
                                 <option value="5">★★★★★ (5 Жұлдыз)</option>
                                 <option value="4.5">★★★★½ (4.5 Жұлдыз)</option>
@@ -356,12 +321,8 @@
         </section>
 
         
-        <!-- ---------------------------------------------------- -->
-        <!-- --- FOOTER/CONTACT SECTION --- -->
-        <!-- ---------------------------------------------------- -->
         <footer id="contact" class="py-16 md:py-24 bg-section border-t border-border-section">
             <div class="container mx-auto px-4 md:px-6 text-center md:text-left">
-                <!-- Адаптивность: grid-cols-1 на мобильных, grid-cols-3 на десктопах -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <div class="md:text-left text-center">
                         <h3 class="text-2xl font-extrabold text-red-500 mb-4">CULINARY CO.</h3>
@@ -397,51 +358,35 @@
     </main>
 
     
-    <!-- ---------------------------------------------------- -->
-    <!-- --- FLOATING CART BUTTON (Mobile) --- -->
-    <!-- ---------------------------------------------------- -->
-    <!-- Увеличенный таргет 16x16, всегда справа внизу -->
     <button onclick="toggleCart()" class="md:hidden fixed bottom-5 right-5 z-40 w-16 h-16 rounded-full glass-header shadow-2xl flex items-center justify-center text-red-500 transform transition-transform duration-300 hover:scale-105 active:scale-95 border-2 border-red-500">
         <ion-icon name="cart-outline" class="text-3xl"></ion-icon>
-        <!-- FIX: Added light/dark border classes for button visibility in both modes -->
         <span id="cart-count-mini" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center border-2 dark:border-[#0f0f0f] light:border-[#fcfcfc] hidden">0</span>
     </button>
 
     
-    <!-- ---------------------------------------------------- -->
-    <!-- --- CART SIDEBAR & OVERLAY --- -->
-    <!-- ---------------------------------------------------- -->
     <div id="cart-overlay" class="fixed inset-0 bg-black/70 z-50 hidden transition-opacity duration-300" onclick="toggleCart()"></div>
-    <!-- Адаптивность: w-full на мобильных, max-w-md на десктопов -->
     <div id="cart-sidebar" class="fixed top-0 right-0 h-full w-full max-w-md glass-sidebar z-[60] transform translate-x-full flex flex-col transition-transform duration-300">
-        <!-- FIX: Added light/dark classes for border and background consistency with custom CSS -->
         <div class="flex justify-between items-center p-6 border-b dark:border-white/10 light:border-black/10">
             <h2 class="text-2xl font-bold text-primary">Сіздің себетіңіз</h2>
-            <!-- Увеличенный тач-таргет для кнопки закрытия -->
             <button onclick="toggleCart()" class="text-secondary hover:text-red-500 text-3xl p-2 -mr-2">
                 <ion-icon name="close-outline"></ion-icon>
             </button>
         </div>
         <div class="flex-grow p-6 overflow-y-auto space-y-4">
             
-            <!-- Cart Items List -->
             <div id="cart-items" class="space-y-4">
                 <p id="cart-empty-msg" class="text-secondary text-center mt-8">Сіздің себетіңіз бос.</p>
             </div>
             
-            <!-- Removed Items (Undo) -->
             <div id="removed-items" class="mt-6 pt-4 border-t border-border-section">
                 <p class="text-sm font-semibold text-secondary mb-2 hidden" id="removed-title">Жақында жойылғандар:</p>
                 <div id="removed-list" class="space-y-2">
-                    <!-- Removed items list here -->
-                </div>
+                    </div>
             </div>
         </div>
-        <!-- FIX: Cart Total Price Color & Overall Style -->
         <div class="p-6 border-t dark:border-white/10 light:border-black/10 dark:bg-[#1a1a1a]/50 light:bg-gray-100/50">
             <div class="flex justify-between items-center mb-4 text-xl">
                 <span class="font-medium text-primary">Жалпы сома:</span>
-                <!-- FIX: Total price uses text-primary for contrast in light mode, text-red-500 in dark mode for flair -->
                 <span id="cart-total" class="font-bold text-2xl white">$0.00</span>
             </div>
             <button onclick="checkoutWhatsApp()" class="w-full bg-green-500 text-white text-lg font-bold py-3 rounded-xl hover:bg-green-600 transition duration-300 flex items-center justify-center space-x-2 shadow-md">
@@ -455,11 +400,7 @@
     </div>
     
     
-    <!-- ---------------------------------------------------- -->
-    <!-- --- CUSTOMIZATION MODAL (FIXED BUTTONS) --- -->
-    <!-- ---------------------------------------------------- -->
     <div id="customization-modal" class="fixed inset-0 bg-black/80 z-[70] hidden flex items-center justify-center p-4" onclick="closeCustomizationModal()">
-        <!-- Адаптивность: max-w-lg для десктопов, но занимает всю доступную ширину на мобильных -->
         <div class="glass-card w-full max-w-lg p-6 md:p-8 rounded-2xl shadow-2xl animate-in fade-in zoom-in" onclick="event.stopPropagation()">
             <h3 id="modal-item-name" class="text-3xl font-bold text-red-500 mb-4">Тағамды өзгерту</h3>
             <p id="modal-item-description" class="text-secondary mb-4"></p>
@@ -473,10 +414,8 @@
                 <div class="flex items-center justify-between">
                     <label class="block text-secondary font-semibold">Саны</label>
                     <div class="flex items-center space-x-3">
-                        <!-- FIX: Use quantity-button class for bigger, themed buttons. Ensure text-white -->
                         <button onclick="updateModalQuantity(-1)" class="quantity-button bg-gray-700 hover:bg-gray-600 text-white">-</button>
                         <span id="modal-quantity" class="text-primary text-xl font-bold w-4 text-center">1</span>
-                        <!-- FIX: Use quantity-button class for bigger, themed buttons. Ensure text-white -->
                         <button onclick="updateModalQuantity(1)" class="quantity-button bg-red-600 hover:bg-red-700 text-white">+</button>
                     </div>
                 </div>
@@ -489,32 +428,21 @@
     </div>
 
     
-    <!-- ---------------------------------------------------- -->
-    <!-- --- MESSAGE BOX --- -->
-    <!-- ---------------------------------------------------- -->
     <div id="message-box" class="fixed top-20 right-5 z-[100] py-3 px-6 rounded-lg shadow-lg transform translate-x-[120%] transition-transform duration-300"></div>
 
 
     
-    <!-- ---------------------------------------------------- -->
-    <!-- --- JAVASCRIPT LOGIC (FIXED CART BUTTONS) --- -->
-    <!-- ---------------------------------------------------- -->
-<script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, doc, setDoc, onSnapshot, collection, query, where, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+    <script type="module">
+        // Removed all Firebase imports
 
-        // --- GLOBAL REFERENCES & FIREBASE SETUP ---
-        let db;
-        let auth;
-        let userId = null;
-        let isAuthReady = false;
-        let hasReviewed = false; 
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-
-        // Cart State
-        let cart = []; 
+        // --- GLOBAL REFERENCES & LOCAL STORAGE SETUP ---
+        // Cart State: Load from local storage, default to empty array
+        let cart = JSON.parse(localStorage.getItem('cart') || '[]'); 
         let customizationItem = null; 
+        
+        // Review State: Load from local storage, default to empty array
+        let localReviews = JSON.parse(localStorage.getItem('localReviews') || '[]');
+        const hasReviewedKey = 'hasReviewed'; // Local storage key for review status
 
         // UI Refs
         const cartSidebar = document.getElementById('cart-sidebar');
@@ -554,121 +482,44 @@
             { name: "Жаңа сығылған апельсин шырыны", price: 5.00, category: "drinks", description: "Күнделікті сығылған апельсиндер, қант қосылмаған.", image: "Orange+Juice" }
         ];
 
-        async function initFirebase() {
-            try {
-                const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
-                const app = initializeApp(firebaseConfig);
-                db = getFirestore(app);
-                auth = getAuth(app);
-                
-                const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-
-                if (initialAuthToken) {
-                    await signInWithCustomToken(auth, initialAuthToken);
-                } else {
-                    await signInAnonymously(auth);
-                }
-                
-                onAuthStateChanged(auth, (user) => {
-                    if (user) {
-                        userId = user.uid;
-                        isAuthReady = true;
-                        displayUserIdEl.textContent = userId;
-                        console.log("Firebase Auth Ready. User ID:", userId);
-                        
-                        loadCartFromFirestore();
-                        listenForReviews();
-                        checkIfReviewed(); 
-                    }
-                });
-            } catch (error) {
-                console.error("Firebase initialization failed:", error);
-                displayUserIdEl.textContent = "Қате";
-                showMessage("Дерекқорға қосылу мүмкін емес. Себет пен Пікірлер сақталмайды.", 'error');
-                renderMenu();
-            }
-        }
-
-        // --- FIREBASE DATA FUNCTIONS ---
-        const getCartDocRef = () => doc(db, `artifacts/${appId}/users/${userId}/carts`, 'current');
-        const getReviewsCollectionRef = () => collection(db, `artifacts/${appId}/public/data/reviews`);
+        // --- LOCAL STORAGE FUNCTIONS ---
         
-        async function saveCartToFirestore() {
-            if (!isAuthReady) return;
-            try {
-                const itemsToSave = cart.filter(item => item.id); 
-                await setDoc(getCartDocRef(), { items: itemsToSave });
-                console.log("Себет Firestore-ға сәтті сақталды.");
-            } catch (error) {
-                console.error("Себетті сақтау қатесі:", error);
-            }
+        function saveCartToLocalStorage() {
+            // Filter out items without an ID before saving
+            const itemsToSave = cart.filter(item => item.id);
+            localStorage.setItem('cart', JSON.stringify(itemsToSave));
+        }
+        
+        function saveReviewsToLocalStorage() {
+            localStorage.setItem('localReviews', JSON.stringify(localReviews));
         }
 
-        function loadCartFromFirestore() {
-            if (!isAuthReady) return;
+        function loadInitialState() {
+            // Display dummy ID or loading text (as the ID element is in the HTML)
+            displayUserIdEl.textContent = "Жоқ (Local)"; 
             
-            onSnapshot(getCartDocRef(), (docSnapshot) => {
-                if (docSnapshot.exists() && docSnapshot.data()?.items) {
-                    cart = docSnapshot.data().items;
-                } else {
-                    cart = [];
-                }
-                updateCart(); 
-            }, (error) => {
-                console.error("Себетті тыңдау қатесі:", error);
-            });
-        }
-
-        async function checkIfReviewed() {
-            if (!isAuthReady || !userId) return;
-
-            try {
-                const q = query(getReviewsCollectionRef(), where("userId", "==", userId));
-                const snapshot = await getDocs(q);
-
-                if (!snapshot.empty) {
-                    hasReviewed = true;
-                    reviewFormEl.classList.add('hidden');
-                    reviewThankYouEl.classList.remove('hidden');
-                } else {
-                    hasReviewed = false;
-                    reviewFormEl.classList.remove('hidden');
-                    reviewThankYouEl.classList.add('hidden');
-                }
-            } catch (error) {
-                console.error("Пікір күйін тексеру қатесі:", error);
+            // Check review status locally
+            if (localStorage.getItem(hasReviewedKey) === 'true') {
+                reviewFormEl.classList.add('hidden');
+                reviewThankYouEl.classList.remove('hidden');
+            } else {
+                reviewFormEl.classList.remove('hidden');
+                reviewThankYouEl.classList.add('hidden');
             }
-        }
-
-
-        function listenForReviews() {
-            if (!isAuthReady) return;
-
-            const reviewsQuery = query(getReviewsCollectionRef());
             
-            onSnapshot(reviewsQuery, (snapshot) => {
-                const fetchedReviews = [];
-                snapshot.forEach(doc => {
-                    fetchedReviews.push(doc.data());
-                });
-                fetchedReviews.sort((a, b) => (b.timestamp?.seconds || 0) - (a.timestamp?.seconds || 0));
-                
-                renderReviews(fetchedReviews);
-            }, (error) => {
-                console.error("Пікірлерді тыңдау қатесі:", error);
-                renderReviews([]); 
-            });
+            // Initial render of local reviews
+            renderReviews(localReviews);
         }
 
-        window.handleReviewSubmit = async function(event) {
+        // Removed initFirebase, getCartDocRef, getReviewsCollectionRef, saveCartToFirestore, loadCartFromFirestore, checkIfReviewed, listenForReviews
+
+        window.handleReviewSubmit = function(event) {
             event.preventDefault();
-            if (!isAuthReady || !userId) {
-                showMessage("Жіберу үшін аутентификацияның аяқталуын күтіңіз.", 'error');
+            
+            // Check local storage instead of Firebase/userId
+            if (localStorage.getItem(hasReviewedKey) === 'true') {
+                showMessage("Сіз тек бір пікір жібере аласыз. Рахмет!", 'info');
                 return;
-            }
-            if (hasReviewed) {
-                 showMessage("Сіз тек бір пікір жібере аласыз. Рахмет!", 'info');
-                 return;
             }
 
             const name = document.getElementById('review-name').value.trim();
@@ -686,30 +537,27 @@
             }
 
             const reviewData = {
-                userId: userId, 
+                // userId and serverTimestamp removed
                 name,
                 rating,
                 quote,
                 initials,
-                timestamp: serverTimestamp() 
+                timestamp: Date.now() // Use JS timestamp for sorting
             };
             
-            try {
-                const reviewDocRef = doc(getReviewsCollectionRef(), userId);
-                await setDoc(reviewDocRef, reviewData);
+            // Local Review Handling
+            localReviews.unshift(reviewData); 
+            saveReviewsToLocalStorage();
+            localStorage.setItem(hasReviewedKey, 'true'); // Set local flag
 
-                showMessage("Рахмет! Сіздің пікіріңіз жіберілді.", 'success');
-                document.getElementById('review-form').reset();
-                updateCharCount(); 
-                
-                hasReviewed = true;
-                reviewFormEl.classList.add('hidden');
-                reviewThankYouEl.classList.remove('hidden');
-                
-            } catch (error) {
-                console.error("Құжатты қосу қатесі: ", error);
-                showMessage("Пікір жіберілмеді. Қайталап көріңіз. Қауіпсіздік ережелерінің жазуға рұқсат беретініне көз жеткізіңіз.", 'error');
-            }
+            showMessage("Рахмет! Сіздің пікіріңіз жіберілді.", 'success');
+            document.getElementById('review-form').reset();
+            updateCharCount(); 
+            
+            // UI update
+            reviewFormEl.classList.add('hidden');
+            reviewThankYouEl.classList.remove('hidden');
+            renderReviews(localReviews); 
         }
 
         // --- UI UTILITY FUNCTIONS ---
@@ -911,7 +759,7 @@
             closeCustomizationModal();
         }
 
-        // --- CART LOGIC (UPDATED FOR REMOVAL/UNDO) ---
+        // --- CART LOGIC (UPDATED FOR LOCAL STORAGE) ---
 
         function updateCart() {
             cartItemsContainer.innerHTML = ''; 
@@ -940,11 +788,9 @@
                         <img src="https://placehold.co/100x100/333/fff?text=${item.name.split(' ').join('+')}" alt="${item.name}" class="w-16 h-16 rounded-lg object-cover flex-shrink-0">
                         <div class="flex-grow">
                             <h4 class="font-semibold text-primary">${item.name}</h4>
-                            <!-- FIX: Price uses text-secondary/primary for light mode contrast -->
                             <p class="text-secondary dark:text-red-400 light:text-secondary">$${item.price.toFixed(2)}</p>
                             ${instructionHTML}
                         </div>
-                        <!-- FIX: Use quantity-button class for bigger buttons. Changed text color logic -->
                         <div class="flex items-center space-x-2">
                             <button onclick="updateQuantity('${itemKey}', -1)" class="quantity-button bg-gray-700 hover:bg-gray-600 text-white">-</button>
                             <span class="text-primary w-4 text-center">${item.quantity}</span>
@@ -990,7 +836,8 @@
                 cartCountMiniEl.classList.add('hidden');
             }
 
-            saveCartToFirestore();
+            // Save cart state to local storage instead of Firestore
+            saveCartToLocalStorage();
         }
  
         window.removeFromCart = function(itemId) {
@@ -1085,6 +932,9 @@
             const reviewWrapper = document.getElementById('review-wrapper');
             reviewWrapper.innerHTML = ''; 
 
+            // Sort by timestamp (now using JS Date.now() for local storage)
+            reviews.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+
             if (reviews.length === 0) {
                  reviewWrapper.innerHTML = `<div class="swiper-slide p-8 text-center text-secondary">Әлі пікірлер жоқ. Бірінші болып пікір қалдырыңыз!</div>`;
             }
@@ -1138,7 +988,7 @@
         // --- INITIALIZATION ---
         window.onload = function() {
             initializeTheme();
-            initFirebase();
+            loadInitialState(); // Calls local initialization logic
             renderMenu();
             switchTab(null, 'mains'); 
             updateCart();
